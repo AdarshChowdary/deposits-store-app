@@ -1,9 +1,11 @@
 // Here, we are using clerk webhook to send the user data whenever a new user signed up.
 // We are using proxy to create temporary public domain, so that clerk knows where to send the data.
+"use server";
 
 import prisma from "@/lib/prisma";
+import { NextRequest } from "next/server";
 
-export const POST = async (req: Request) => {
+export const POST = async (req: NextRequest) => {
   const { data } = await req.json();
   console.log("clerk webhook data recieved", data);
 

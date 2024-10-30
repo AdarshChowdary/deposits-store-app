@@ -1,5 +1,5 @@
 import SearchField from "@/components/SearchField";
-import { SignInButton, UserButton } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
 
@@ -15,9 +15,7 @@ const Navbar = () => {
             so go to searchfield and write the "onsubmit" function.
         */}
         <SearchField />
-        <SignInButton>
-          <UserButton />
-        </SignInButton>
+        <UserButton />
       </div>
     </header>
   );
